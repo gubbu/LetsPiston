@@ -1,0 +1,8 @@
+[package]
+name = "gamesys"
+version = "0.1.0"
+authors = ["Zimmerle"]
+edition = "2018"
+
+[dependencies]
+piston_window = "*"
