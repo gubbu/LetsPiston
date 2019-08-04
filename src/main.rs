@@ -1,11 +1,11 @@
 extern crate piston_window;
 mod gamewindow;
 mod fontrender;
-
+//simple demo of the two modules gamewindow and fontrender
 struct Gametest{alive: f64}
 
 //const MESSAGE: String = String::from("HELLO WORLD!+-*/ WORLD: HOW ARE YOU\nI AM NOT OK.");
-
+//implementing the gametrait for Gametest.
 impl gamewindow::Gametrait for Gametest{
     fn onstart(&mut self){println!("starting")}
 
@@ -21,7 +21,7 @@ impl gamewindow::Gametrait for Gametest{
         fontrender::drawstring("HELLO\n33", 10.0, 10.0, 2.0, 4.0, [0.25;4], transform, g);
         fontrender::drawstring("TEST:   35/5=7", self.alive, self.alive+10., 2.0, 4.0, [1.0, 0.0, 0.0, 0.1], transform, g);
     }
-
+    
     fn shouldquit(&self)->bool{return false;}
     fn onquit(&mut self){println!("QUITING!");}
     fn keyboard(&mut self, ispressed: bool, keychar: char){
